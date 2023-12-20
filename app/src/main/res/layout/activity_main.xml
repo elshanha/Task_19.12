@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+<data>
+    <variable
+        name="viewModel"
+        type="com.example.task_1912.MainActivityViewModel" />
+</data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    tools:ignore="MissingConstraints"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+
+    >
+
+    <EditText
+        android:hint="Product name"
+        android:id="@+id/edt1"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="@={viewModel.name}">
+
+    </EditText>
+
+    <EditText
+        android:hint="Product code"
+        app:layout_constraintTop_toBottomOf="@+id/edt1"
+        android:id="@+id/edt2"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="@={viewModel.code}">
+
+    </EditText>
+
+    <EditText
+        android:hint="Product description"
+        app:layout_constraintTop_toBottomOf="@+id/edt2"
+        android:id="@+id/edt3"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@={viewModel.description}">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/btn1"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Add to console"
+        app:layout_constraintTop_toBottomOf="@+id/edt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
